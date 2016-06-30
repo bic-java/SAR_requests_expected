@@ -1,0 +1,125 @@
+{
+    "nombre": "",
+    "descripcion": "",
+    "imagen_url": "",
+    "precio_publico": "",
+    "precio_mediclub": "",
+    "servicios": [
+        {
+            "tipo": "simple",
+            "sku": "",
+            "nombre": "",
+            "descripcion_corta": "",
+            "descripcion_completa": "",
+            "condiciones": "",
+            "financiamiento_corto": "",
+            "financiamiento_completo": "",
+            "imagen_url": "",
+            "sociedad":"SA|SC",
+            "precios": {
+                "precio_publico": "",
+                "precio_A": "",
+                "precio_AA": "",
+                "precio_AAA": ""
+            },
+            "meta": {
+                "meta_titulo": "",
+                "meta_palabras_clave": "",
+                "meta_descripcion": ""
+            },
+            "proveedor": {
+                "costo": "",
+                "proveedor_id": ""
+            },
+            "ubicacion": {
+                "idSucursal": "",
+                "nombreSucursal": "",
+                "estado": "",
+                "ciudad": "",
+                "direccion": "",
+                "longitud": "",
+                "latitud": "",
+                "horario": "",
+                "telefonos": "55 - 12345678 / 55 - 87654321"
+            },
+            "categorias": [
+                2,
+                4,
+                6
+            ],
+            "productos_relacionados": [
+                "SKU1",
+                "SKU2"
+            ],
+            "ventas_sugestivas": [
+                "SKU1",
+                "SKU2"
+            ],
+            "ventas_cruzadas": [
+                "SKU1",
+                "SKU2"
+            ]
+        },
+        {
+            "tipo": "agrupado",
+            "visible": false,
+            "sku": "",
+            "nombre": "",
+            "descripcion_corta": "",
+            "descripcion_completa": "",
+            "condiciones": "",
+            "financiamiento_corto": "",
+            "financiamiento_completo": "",
+            "imagen_url": "",
+            "precios": {
+                "precio_publico": "",
+                "precio_A": "",
+                "precio_AA": "",
+                "precio_AAA": ""
+            },
+            "meta": {
+                "meta_titulo": "",
+                "meta_palaber_clave": "",
+                "meta_descripcion": ""
+            },
+            "ubicacion": {
+                "idSucursal": "",
+                "nombreSucursal": "",
+                "estado": "",
+                "ciudad": "",
+                "direccion": "",
+                "longitud": "",
+                "latitud": "",
+                "horario": "",
+                "telefonos": "55 - 12345678 / 55 - 87654321"
+            },
+            "categorias": [
+                2,
+                4,
+                6
+            ],
+            "productos_relacionados": [
+                "SKU1",
+                "SKU2"
+            ],
+            "ventas_sugestivas": [
+                "SKU1",
+                "SKU2"
+            ],
+            "ventas_cruzadas": [
+                "SKU1",
+                "SKU2"
+            ],
+            "servicios": [
+                {
+                    "costo": "",
+                    "proveedor_id": ""
+                },
+                {
+                    "costo": "",
+                    "proveedor_id": ""
+                }
+            ]
+        }
+    ]
+}
