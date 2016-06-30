@@ -1,43 +1,43 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "description": "An explanation about the purpose of this instance.",
+    "description": "Servicio para publicar en la tienda en linea.",
     "properties": {
         "sku": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Identificador unico del servicio, no puede repetirse."
         },
         "nombre": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Nombre con el que aparecerá el servicio a la hora de venderlo."
         },
         "descripcion_corta": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Una descripcion corta que se mostrará en los resultados de busquedas y cuando se muestren muchos productos en una sola vista."
         },
         "descripcion_completa": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Descripcion completa de, en que consiste el servicio o grupo de servicios."
         },
         "condiciones": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Requisitos que debe cumplir el cliente antes de realizar la compra."
         },
         "financiamiento_corto": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Es un campo de texto informativo."
         },
         "financiamiento_completo": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Descripcion del financiamiento."
         },
         "imagen_url": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance."
+            "description": "Direccion url de una imagen jpg, png, gif, svg o cualquier extension soportada por los navegadores web actuales. para mostrar en la informacion de la cirugía."
         },
         "sociedad": {
             "type": "string",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Indica que sociedad va a facturar este servicio.",
             "enum": [
                 "SA",
                 "SC"
@@ -45,23 +45,23 @@
         },
         "precios": {
             "type": "object",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Precios a los que se venderá el servicio segun el tipo de cliente.",
             "properties": {
                 "precio_publico": {
-                    "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "type": "float",
+                    "description": "Precio al que se venderá el servicio al publico en general."
                 },
                 "precio_A": {
-                    "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "type": "float",
+                    "description": "Precio al que se venderá el servicio a los clientes que pertenescan al grupo A."
                 },
                 "precio_AA": {
-                    "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "type": "float",
+                    "description": "Precio al que se venderá el servicio a los clientes que pertenescan al grupo AA."
                 },
                 "precio_AAA": {
-                    "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "type": "float",
+                    "description": "Precio al que se venderá el servicio a los clientes que pertenescan al grupo AA."
                 }
             },
             "required": [
@@ -73,38 +73,35 @@
         },
         "meta": {
             "type": "object",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Propiedades meta para la pagina del servicio. por ejemplo <meta name='title' content='Titulo de la página'>",
             "properties": {
                 "meta_titulo": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Texto para colocar en el elemento meta de nombre title."
                 },
                 "meta_palabra_clave": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Texto para colocar en el elemento meta de nombre keywords."
                 },
                 "meta_descripcion": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Texto para colocar en el elemento meta de nombre description."
                 }
             },
             "required": [
-                "meta_titulo",
-                "meta_palabra_clave",
-                "meta_descripcion"
             ]
         },
         "proveedor": {
             "type": "object",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Informacion del proveedor del servicio. será requerido solo si el tipo de servicio se define como 'simple'.",
             "properties": {
                 "costo": {
-                    "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "type": "float",
+                    "description": "Es el monto que se le pagará al proveedor por brindar este servicio."
                 },
                 "proveedor_id": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Identificador del proveedor del servicio."
                 }
             },
             "required": [
@@ -114,43 +111,43 @@
         },
         "ubicacion": {
             "type": "object",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Lugar donde el cliente recibirá el servicio adquirido, será requerido solo si el tipo de servicio se define como 'simple'.",
             "properties": {
                 "idSucursal": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Identificador de la sucursal donde se redime el servicio."
                 },
                 "nombreSucursal": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "nombre de la sucursal donde se redime el servicio."
                 },
                 "estado": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Entidad donde se ubica la sucursal donde se redime el servicio."
                 },
                 "ciudad": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Cliudad donde se ubica la sucursal donde se redime el servicio."
                 },
                 "direccion": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Direccion donde se ubica la sucursal donde se redime el servicio."
                 },
                 "longitud": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Longitud del punto geografico donde se ubica la sucursal donde se redime el servicio."
                 },
                 "latitud": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Latitud del punto geografico donde se ubica la sucursal donde se redime el servicio."
                 },
                 "horario": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Horarios en los que el cliente puede asistir para recibir el servicio comprado."
                 },
                 "telefonos": {
                     "type": "string",
-                    "description": "An explanation about the purpose of this instance."
+                    "description": "Telefonos de la sucursal donde se redime el servicio."
                 }
             },
             "required": [
@@ -167,34 +164,34 @@
         },
         "categorias": {
             "type": "array",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Lista de categorias en las que aparecerá el servicio.",
             "items": {
                 "type": "integer",
-                "description": "An explanation about the purpose of this instance."
+                "description": "Id de categoria."
             }
         },
         "productos_relacionados": {
             "type": "array",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Lista de SKUs de los productos relacionados.",
             "items": {
                 "type": "string",
-                "description": "An explanation about the purpose of this instance."
+                "description": "SKU del producto."
             }
         },
         "ventas_sugestivas": {
             "type": "array",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Lista de SKUs de los productos para ventas sugersivas.",
             "items": {
                 "type": "string",
-                "description": "An explanation about the purpose of this instance."
+                "description": "SKU del producto."
             }
         },
         "ventas_cruzadas": {
             "type": "array",
-            "description": "An explanation about the purpose of this instance.",
+            "description": "Lista de SKUs de los productos para ventas cruzadas.",
             "items": {
                 "type": "string",
-                "description": "An explanation about the purpose of this instance."
+                "description": "SKU del producto."
             }
         }
     },
@@ -212,9 +209,6 @@
         "meta",
         "proveedor",
         "ubicacion",
-        "categorias",
-        "productos_relacionados",
-        "ventas_sugestivas",
-        "ventas_cruzadas"
+        "categorias"
     ]
 }
