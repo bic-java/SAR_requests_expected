@@ -1,0 +1,12 @@
+{
+    "idProveedor":"",
+    "nombreCompleto":"",
+    "email":"",
+    "idTipoProveedor":"",
+    "tipoProveedor":"",
+    "especialidadId":"",
+    "especialidad":"",
+    "tituloBiografia":"",
+    "textoBiografia":"",
+    "video_url":""
+}

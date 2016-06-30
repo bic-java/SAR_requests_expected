@@ -1,0 +1,220 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "description": "An explanation about the purpose of this instance.",
+    "properties": {
+        "sku": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "nombre": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "descripcion_corta": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "descripcion_completa": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "condiciones": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "financiamiento_corto": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "financiamiento_completo": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "imagen_url": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance."
+        },
+        "sociedad": {
+            "type": "string",
+            "description": "An explanation about the purpose of this instance.",
+            "enum": [
+                "SA",
+                "SC"
+            ]
+        },
+        "precios": {
+            "type": "object",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+                "precio_publico": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "precio_A": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "precio_AA": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "precio_AAA": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                }
+            },
+            "required": [
+                "precio_publico",
+                "precio_A",
+                "precio_AA",
+                "precio_AAA"
+            ]
+        },
+        "meta": {
+            "type": "object",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+                "meta_titulo": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "meta_palabra_clave": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "meta_descripcion": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                }
+            },
+            "required": [
+                "meta_titulo",
+                "meta_palabra_clave",
+                "meta_descripcion"
+            ]
+        },
+        "proveedor": {
+            "type": "object",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+                "costo": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "proveedor_id": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                }
+            },
+            "required": [
+                "costo",
+                "proveedor_id"
+            ]
+        },
+        "ubicacion": {
+            "type": "object",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+                "idSucursal": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "nombreSucursal": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "estado": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "ciudad": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "direccion": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "longitud": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "latitud": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "horario": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                },
+                "telefonos": {
+                    "type": "string",
+                    "description": "An explanation about the purpose of this instance."
+                }
+            },
+            "required": [
+                "idSucursal",
+                "nombreSucursal",
+                "estado",
+                "ciudad",
+                "direccion",
+                "longitud",
+                "latitud",
+                "horario",
+                "telefonos"
+            ]
+        },
+        "categorias": {
+            "type": "array",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+                "type": "integer",
+                "description": "An explanation about the purpose of this instance."
+            }
+        },
+        "productos_relacionados": {
+            "type": "array",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+                "type": "string",
+                "description": "An explanation about the purpose of this instance."
+            }
+        },
+        "ventas_sugestivas": {
+            "type": "array",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+                "type": "string",
+                "description": "An explanation about the purpose of this instance."
+            }
+        },
+        "ventas_cruzadas": {
+            "type": "array",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+                "type": "string",
+                "description": "An explanation about the purpose of this instance."
+            }
+        }
+    },
+    "required": [
+        "sku",
+        "nombre",
+        "descripcion_corta",
+        "descripcion_completa",
+        "condiciones",
+        "financiamiento_corto",
+        "financiamiento_completo",
+        "imagen_url",
+        "sociedad",
+        "precios",
+        "meta",
+        "proveedor",
+        "ubicacion",
+        "categorias",
+        "productos_relacionados",
+        "ventas_sugestivas",
+        "ventas_cruzadas"
+    ]
+}

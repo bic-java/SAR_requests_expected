@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Un medico o laboratorio, que provee uno o varios servicios",
+  "properties": {
+    "idProveedor": {
+      "type": "string",
+      "description": "Un identificador unico para el proveedor"
+    },
+    "nombreCompleto": {
+      "type": "string",
+      "description": "Nombre completo del proveedor"
+    },
+    "email": {
+      "type": "string",
+      "description": "Correo electronico del proveedor"
+    },
+    "idTipoProveedor": {
+      "type": "string",
+      "description": "ID unico de tipo de proveedor."
+    },
+    "tipoProveedor": {
+      "type": "string",
+      "description": "Descripción del tipo de proveedor"
+    },
+    "especialidadId": {
+      "type": "string",
+      "description": "ID unico de la especialidad del proveedor"
+    },
+    "especialidad": {
+      "type": "string",
+      "description": "Descripción de la especialidad del proveedor"
+    },
+    "tituloBiografia": {
+      "type": "string",
+      "description": "Titulo para la sección de 'Biografia'"
+    },
+    "textoBiografia": {
+      "type": "string",
+      "description": "Contenido de la seccion 'Biografia'"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "URL de video, solo se aceptan URL de youtube"
+    }
+  },
+  "required": [
+    "idProveedor",
+    "nombreCompleto",
+    "email",
+    "idTipoProveedor",
+    "tipoProveedor",
+    "especialidadId",
+    "especialidad",
+    "tituloBiografia",
+    "textoBiografia",
+    "video_url"
+  ]
+}
