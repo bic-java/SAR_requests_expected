@@ -202,10 +202,10 @@
                     },
                     "categorias": {
                         "type": "array",
-                        "description": "An explanation about the purpose of this instance.",
+                        "description": "Lista de categorias en las que aparecerá el servicio.",
                         "items": {
                             "type": "integer",
-                            "description": "An explanation about the purpose of this instance."
+                            "description": "Id de categoria."
                         }
                     },
                     "productos_relacionados": {
