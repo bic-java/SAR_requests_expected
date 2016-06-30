@@ -1,0 +1,290 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "description": "Contiene la descripcion de un paquete(Cirugia) y todos los productos que se publicarán en la tienda para la misma.",
+    "properties": {
+        "nombre": {
+            "type": "string",
+            "description": "Nombre que se le dará a la cirugía por ejemplo 'Operacion de cataratas'."
+        },
+        "descripcion": {
+            "type": "string",
+            "description": "Descripción completa que se mostrará al cliente en la tienda al desplegar la informacion de la cirugía"
+        },
+        "imagen_url": {
+            "type": "string",
+            "description": "Direccion url de una imagen jpg, png, gif, svg o cualquier extension soportada por los navegadores web actuales. para mostrar en la informacion de la cirugía"
+        },
+        "precio_publico": {
+            "type": "string",
+            "description": "Precio regular de la cirugía en el mercado, este aparecerá tachado en la tienda."
+        },
+        "precio_mediclub": {
+            "type": "string",
+            "description": "Precio de la cirugía al comprar en la tienda en linea de medica club."
+        },
+        "servicios": {
+            "type": "array",
+            "description": "Una lista de los servicios que comprende la cirugía, cada uno se compra por separado, se pueden agrupar diferentes servicios para una sola venta en la tienda en linea.",
+            "items": {
+                "type": "object",
+                "description": "Servicio que será vendido individualmente en magento. Puede ser un solo servicio o un grupo de servicios que se venderán como uno solo.",
+                "properties": {
+                    "tipo": {
+                        "type": "string",
+                        "description": "Indica s es un servicio simple o un grupo de servicios para una sola venta.",
+                        "enum": [
+                            "simple",
+                            "agrupado"
+                        ]
+                    },
+                    "visible": {
+                        "type": "boolean",
+                        "description": "Indica si el servicio será visible para los clientes en la tienda en linea."
+                    },
+                    "sku": {
+                        "type": "string",
+                        "description": "Identificador unico del servicio, no puede repetirse."
+                    },
+                    "nombre": {
+                        "type": "string",
+                        "description": "Nombre con el que aparecerá el servicio a la hora de venderlo."
+                    },
+                    "descripcion_corta": {
+                        "type": "string",
+                        "description": "Una descripcion corta que se mostrará en los resultados de busquedas y cuando se muestren muchos productos en una sola vista."
+                    },
+                    "descripcion_completa": {
+                        "type": "string",
+                        "description": "Descripcion completa de, en que consiste el servicio o grupo de servicios."
+                    },
+                    "condiciones": {
+                        "type": "string",
+                        "description": "Requisitos que debe cumplir el cliente antes de realizar la compra."
+                    },
+                    "financiamiento_corto": {
+                        "type": "string",
+                        "description": "Es un campo de texto informativo."
+                    },
+                    "financiamiento_completo": {
+                        "type": "string",
+                        "description": "Descripcion del financiamiento."
+                    },
+                    "imagen_url": {
+                        "type": "string",
+                        "description": "Direccion url de una imagen jpg, png, gif, svg o cualquier extension soportada por los navegadores web actuales. para mostrar en la informacion de la cirugía.",
+                        "enum": [
+                            "SA",
+                            "SC"
+                        ]
+                    },
+                    "precios": {
+                        "type": "object",
+                        "description": "Precios a los que se venderá el servicio segun el tipo de cliente.",
+                        "properties": {
+                            "precio_publico": {
+                                "type": "float",
+                                "description": "Precio al que se venderá el servicio al publico en general."
+                            },
+                            "precio_A": {
+                                "type": "float",
+                                "description": "Precio al que se venderá el servicio a los clientes que pertenescan al grupo A."
+                            },
+                            "precio_AA": {
+                                "type": "string",
+                                "description": "Precio al que se venderá el servicio a los clientes que pertenescan al grupo AA."
+                            },
+                            "precio_AAA": {
+                                "type": "string",
+                                "description": "Precio al que se venderá el servicio a los clientes que pertenescan al grupo AA."
+                            }
+                        },
+                        "required": [
+                            "precio_publico",
+                            "precio_A",
+                            "precio_AA",
+                            "precio_AAA"
+                        ]
+                    },
+                    "meta": {
+                        "type": "object",
+                        "description": "Propiedades meta para la pagina del servicio. por ejemplo <meta name='title' content='Titulo de la página'>",
+                        "properties": {
+                            "meta_titulo": {
+                                "type": "string",
+                                "description": "Texto para colocar en el elemento meta de nombre title."
+                            },
+                            "meta_palaber_clave": {
+                                "type": "string",
+                                "description": "Texto para colocar en el elemento meta de nombre keywords."
+                            },
+                            "meta_descripcion": {
+                                "type": "string",
+                                "description": "Texto para colocar en el elemento meta de nombre description."
+                            }
+                        },
+                        "required": [
+                            "meta_titulo",
+                            "meta_palaber_clave",
+                            "meta_descripcion"
+                        ]
+                    },
+                    "proveedor": {
+                        "type": "object",
+                        "description": "Informacion del proveedor del servicio. será requerido solo si el tipo de servicio se define como 'simple'.",
+                        "properties": {
+                            "costo": {
+                                "type": "float",
+                                "description": "Es el monto que se le pagará al proveedor por brindar este servicio."
+                            },
+                            "proveedor_id": {
+                                "type": "string",
+                                "description": "Identificador del proveedor del servicio."
+                            }
+                        },
+                        "required": [
+                            "costo",
+                            "proveedor_id"
+                        ]
+                    },
+                    "ubicacion": {
+                        "type": "object",
+                        "description": "Lugar donde el cliente recibirá el servicio adquirido, será requerido solo si el tipo de servicio se define como 'simple'.",
+                        "properties": {
+                            "idSucursal": {
+                                "type": "string",
+                                "description": "Identificador de la sucursal donde se redime el servicio."
+                            },
+                            "nombreSucursal": {
+                                "type": "string",
+                                "description": "nombre de la sucursal donde se redime el servicio."
+                            },
+                            "estado": {
+                                "type": "string",
+                                "description": "Entidad donde se ubica la sucursal donde se redime el servicio."
+                            },
+                            "ciudad": {
+                                "type": "string",
+                                "description": "Cliudad donde se ubica la sucursal donde se redime el servicio."
+                            },
+                            "direccion": {
+                                "type": "string",
+                                "description": "Direccion donde se ubica la sucursal donde se redime el servicio."
+                            },
+                            "longitud": {
+                                "type": "string",
+                                "description": "Longitud del punto geografico donde se ubica la sucursal donde se redime el servicio."
+                            },
+                            "latitud": {
+                                "type": "string",
+                                "description": "Latitud del punto geografico donde se ubica la sucursal donde se redime el servicio."
+                            },
+                            "horario": {
+                                "type": "string",
+                                "description": "Horarios en los que el cliente puede asistir para recibir el servicio comprado."
+                            },
+                            "telefonos": {
+                                "type": "string",
+                                "description": "Telefonos de la sucursal donde se redime el servicio."
+                            }
+                        },
+                        "required": [
+                            "idSucursal",
+                            "nombreSucursal",
+                            "estado",
+                            "ciudad",
+                            "direccion",
+                            "longitud",
+                            "latitud",
+                            "horario",
+                            "telefonos"
+                        ]
+                    },
+                    "categorias": {
+                        "type": "array",
+                        "description": "An explanation about the purpose of this instance.",
+                        "items": {
+                            "type": "integer",
+                            "description": "An explanation about the purpose of this instance."
+                        }
+                    },
+                    "productos_relacionados": {
+                        "type": "array",
+                        "description": "An explanation about the purpose of this instance.",
+                        "items": {
+                            "type": "string",
+                            "description": "An explanation about the purpose of this instance."
+                        }
+                    },
+                    "ventas_sugestivas": {
+                        "type": "array",
+                        "description": "An explanation about the purpose of this instance.",
+                        "items": {
+                            "type": "string",
+                            "description": "An explanation about the purpose of this instance."
+                        }
+                    },
+                    "ventas_cruzadas": {
+                        "type": "array",
+                        "description": "An explanation about the purpose of this instance.",
+                        "items": {
+                            "type": "string",
+                            "description": "An explanation about the purpose of this instance."
+                        }
+                    },
+                    "servicios": {
+                        "type": "array",
+                        "description": "An explanation about the purpose of this instance.",
+                        "items": {
+                            "type": "object",
+                            "description": "An explanation about the purpose of this instance.",
+                            "properties": {
+                                "costo": {
+                                    "type": "string",
+                                    "description": "An explanation about the purpose of this instance."
+                                },
+                                "proveedor_id": {
+                                    "type": "string",
+                                    "description": "An explanation about the purpose of this instance."
+                                }
+                            },
+                            "required": [
+                                "costo",
+                                "proveedor_id"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "tipo",
+                    "visible",
+                    "sku",
+                    "nombre",
+                    "descripcion_corta",
+                    "descripcion_completa",
+                    "condiciones",
+                    "financiamiento_corto",
+                    "financiamiento_completo",
+                    "imagen_url",
+                    "precios",
+                    "meta",
+                    "proveedor",
+                    "ubicacion",
+                    "categorias",
+                    "productos_relacionados",
+                    "ventas_sugestivas",
+                    "ventas_cruzadas",
+                    "servicios"
+                ]
+            }
+        }
+    },
+    "required": [
+        "nombre",
+        "descripcion",
+        "imagen_url",
+        "precio_publico",
+        "precio_mediclub",
+        "servicios"
+    ]
+}
