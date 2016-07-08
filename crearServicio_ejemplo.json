@@ -1,5 +1,5 @@
 {
-    "sku": "",
+    "id_servicio": "",
     "nombre": "",
     "descripcion_corta": "",
     "descripcion_completa": "",
@@ -40,15 +40,15 @@
         6
     ],
     "productos_relacionados": [
-        "SKU1",
-        "SKU2"
+        "id_servicio1",
+        "id_servicio2"
     ],
     "ventas_sugestivas": [
-        "SKU1",
-        "SKU2"
+        "id_servicio1",
+        "id_servicio2"
     ],
     "ventas_cruzadas": [
-        "SKU1",
-        "SKU2"
+        "id_servicio1",
+        "id_servicio2"
     ]
 }

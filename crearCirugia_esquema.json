@@ -42,7 +42,7 @@
                         "type": "boolean",
                         "description": "Indica si el servicio será visible para los clientes en la tienda en linea."
                     },
-                    "sku": {
+                    "id_servicio": {
                         "type": "string",
                         "description": "Identificador unico del servicio, no puede repetirse."
                     },
@@ -211,26 +211,26 @@
                     },
                     "productos_relacionados": {
                         "type": "array",
-                        "description": "Lista de SKUs de los productos relacionados.",
+                        "description": "Lista de id_servicios de los productos relacionados.",
                         "items": {
                             "type": "string",
-                            "description": "SKU del producto."
+                            "description": "id_servicio del producto."
                         }
                     },
                     "ventas_sugestivas": {
                         "type": "array",
-                        "description": "Lista de SKUs de los productos para ventas sugersivas.",
+                        "description": "Lista de id_servicios de los productos para ventas sugersivas.",
                         "items": {
                             "type": "string",
-                            "description": "SKU del producto."
+                            "description": "id_servicio del producto."
                         }
                     },
                     "ventas_cruzadas": {
                         "type": "array",
-                        "description": "Lista de SKUs de los productos para ventas cruzadas.",
+                        "description": "Lista de id_servicios de los productos para ventas cruzadas.",
                         "items": {
                             "type": "string",
-                            "description": "SKU del producto."
+                            "description": "id_servicio del producto."
                         }
                     },
                     "servicios": {
@@ -259,7 +259,7 @@
                 "required": [
                     "tipo",
                     "visible",
-                    "sku",
+                    "id_servicio",
                     "nombre",
                     "descripcion_corta",
                     "descripcion_completa",
